@@ -1,9 +1,11 @@
 /**
- * qs-lite.js
+ * qs-lite.js - Lightweight querystring parse() & stringify() at less than 1KB minified
  *
+ * @module qs-lite
  * @copyright Yusuke Kawasaki
- * @license MIT
- * @see https://gist.github.com/kawanet/cffd433f179ac393d779
+ * @license BSD
+ * @see https://github.com/kawanet/qs-lite
+ * @see http://kawanet.github.io/qs-lite/module-qs-lite.html
  */
 
 (function(exports, window) {
@@ -16,10 +18,14 @@
   /**
    * Parse string as application/x-www-form-urlencoded representation.
    *
-   * @param string {String}
-   * @returns {Object}
+   * @class qs
+   * @function parse
+   * @param string {String} application/x-www-form-urlencoded representation
+   * @returns {Object} plain key-value pair object
    * @example
-   * var obj = qs.parse("foo=bar&hoge=pomu");
+   * var qs = require("qs-lite");
+   *
+   * var obj = qs.parse("foo=bar&hoge=pomu"); // => { "foo": "bar", "hoge": "pomu" }
    */
 
   function parse(string) {
@@ -41,10 +47,14 @@
   /**
    * Stringify object as application/x-www-form-urlencoded representation.
    *
-   * @param obj {Object}
-   * @returns {string}
+   * @class qs
+   * @function stringify
+   * @param obj {Object} plain key-value pair object
+   * @returns {string} application/x-www-form-urlencoded representation.
    * @example
-   * var string = qs.stringify({foo: "bar", hoge: "pomu"});
+   * var qs = require("qs-lite");
+   *
+   * var string = qs.stringify({foo: "bar", hoge: "pomu"}); // => "foo=bar&hoge=pomu"
    */
 
   function stringify(obj) {
