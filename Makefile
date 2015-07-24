@@ -24,7 +24,7 @@ test: jshint $(DEST)
 	$(MOCHA) -R spec test/*.js
 
 jshint:
-	$(JSHINT) $(SRC)
+	$(JSHINT) $(SRC) ./*.json
 
 jsdoc: $(DOC_HTML)
 
