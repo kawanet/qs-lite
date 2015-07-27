@@ -1,4 +1,4 @@
-# qs-lite [![Build Status](https://travis-ci.org/kawanet/qs-lite.svg?branch=master)](https://travis-ci.org/kawanet/qs-lite)
+# qs-lite [![npm version](https://badge.fury.io/js/qs-lite.svg)](http://badge.fury.io/js/qs-lite) [![Build Status](https://travis-ci.org/kawanet/qs-lite.svg?branch=master)](https://travis-ci.org/kawanet/qs-lite)
 
 Lightweight querystring parse() & stringify() at less than 1KB minified
 
