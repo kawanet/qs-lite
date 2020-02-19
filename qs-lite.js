@@ -68,6 +68,9 @@
       if (val === null) return;
       // if (val === "") return;
       if (val instanceof Function) return;
+      if (typeof val === "object") {
+        val = JSON.stringify(val)
+      }
       var pair = encodeURIComponent(key) + "=" + encodeURIComponent(val);
       list.push(pair);
     }
