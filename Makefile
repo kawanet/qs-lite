@@ -3,7 +3,7 @@
 SRC=./qs-lite.js
 DEST=./dist/qs-lite.min.js
 JSHINT=./node_modules/.bin/jshint
-UGLIFYJS=./node_modules/.bin/uglifyjs
+TERSER=./node_modules/.bin/terser
 MOCHA=./node_modules/.bin/mocha
 JSDOC=./node_modules/.bin/jsdoc
 
@@ -18,7 +18,7 @@ clean:
 	rm -fr $(DEST)
 
 $(DEST): $(SRC)
-	$(UGLIFYJS) $(SRC) -c -m -o $(DEST)
+	$(TERSER) $(SRC) -c -m -o $(DEST) --comments false
 
 test: jshint $(DEST)
 	$(MOCHA) -R spec test/*.js
@@ -28,12 +28,12 @@ jshint:
 
 jsdoc: $(DOC_HTML)
 
-$(DOC_HTML): README.md $(SRC) $(DOCS_CSS_SRC)
+$(DOC_HTML): README.md $(SRC) $(DOCS_CSS_SRC) Makefile
 	mkdir -p $(DOCS_DIR)
 	$(JSDOC) -d $(DOCS_DIR) -R README.md $(SRC)
 	cat $(DOCS_CSS_SRC) >> $(DOCS_CSS_DEST)
 	rm -f $(DOCS_DIR)/*.js.html
-	for f in $(DOCS_DIR)/*.html; do sed 's#</a> on .* 201.* GMT.*##' < $$f > $$f~ && mv $$f~ $$f; done
+	for f in $(DOCS_DIR)/*.html; do sed 's#</a> on .* 202.* GMT.*##' < $$f > $$f~ && mv $$f~ $$f; done
 	for f in $(DOCS_DIR)/*.html; do sed 's#<a href=".*.js.html">.*line.*line.*</a>##' < $$f > $$f~ && mv $$f~ $$f; done
 
 .PHONY: all clean test jshint jsdoc

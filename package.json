@@ -1,39 +1,49 @@
 {
   "name": "qs-lite",
-  "version": "0.0.1",
   "description": "Lightweight querystring parse() & stringify() at less than 1KB minified",
-  "main": "qs-lite.js",
-  "scripts": {
-    "test": "make test"
+  "version": "0.0.2",
+  "author": "@kawanet",
+  "bugs": {
+    "url": "https://github.com/kawanet/qs-lite/issues"
   },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "jsdoc": "^3.6.6",
+    "jshint": "^2.12.0",
+    "mocha": "^8.4.0",
+    "terser": "^5.7.0"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/qs-lite.min.js",
+    "qs-lite.d.ts",
+    "qs-lite.js"
+  ],
+  "homepage": "https://github.com/kawanet/qs-lite",
+  "jshintConfig": {
+    "globals": {
+      "exports": true,
+      "window": true
+    },
+    "mocha": true,
+    "undef": true
+  },
+  "keywords": [
+    "ajax",
+    "form",
+    "qs",
+    "query"
+  ],
+  "license": "BSD",
+  "main": "qs-lite.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kawanet/qs-lite.git"
   },
-  "author": "@kawanet",
-  "license": "BSD",
-  "bugs": {
-    "url": "https://github.com/kawanet/qs-lite/issues"
+  "scripts": {
+    "fixpack": "fixpack",
+    "test": "make test"
   },
-  "homepage": "https://github.com/kawanet/qs-lite",
-  "keywords": [
-    "query",
-    "qs",
-    "ajax",
-    "form"
-  ],
-  "devDependencies": {
-    "chai": "^3.0.0",
-    "jsdoc": "^3.3.2",
-    "jshint": "^2.8.0",
-    "mocha": "^2.2.5",
-    "uglify-js": "^2.4.23"
-  },
-  "jshintConfig": {
-    "undef": true,
-    "globals": {
-      "exports": true,
-      "window": true
-    }
-  }
+  "types": "qs-lite.d.ts"
 }
