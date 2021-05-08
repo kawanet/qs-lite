@@ -1,6 +1,6 @@
 {
   "name": "qs-lite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lightweight querystring parse() & stringify() at less than 1KB minified",
   "main": "qs-lite.js",
   "scripts": {
@@ -23,14 +23,15 @@
     "form"
   ],
   "devDependencies": {
-    "chai": "^3.0.0",
-    "jsdoc": "^3.3.2",
-    "jshint": "^2.8.0",
-    "mocha": "^2.2.5",
-    "uglify-js": "^2.4.23"
+    "chai": "^4.3.4",
+    "jsdoc": "^3.6.6",
+    "jshint": "^2.12.0",
+    "mocha": "^8.4.0",
+    "terser": "^5.7.0"
   },
   "jshintConfig": {
     "undef": true,
+    "mocha": true,
     "globals": {
       "exports": true,
       "window": true
