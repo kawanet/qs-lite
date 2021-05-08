@@ -64,8 +64,7 @@
 
     function it(key) {
       var val = obj[key];
-      if ("undefined" === typeof val) return;
-      if (val === null) return;
+      if (val == null) return;
       // if (val === "") return;
       if (val instanceof Function) return;
       var pair = encodeURIComponent(key) + "=" + encodeURIComponent(val);
