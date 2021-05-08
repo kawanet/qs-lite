@@ -13,6 +13,13 @@
     "mocha": "^8.4.0",
     "terser": "^5.7.0"
   },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/qs-lite.min.js",
+    "qs-lite.d.ts",
+    "qs-lite.js"
+  ],
   "homepage": "https://github.com/kawanet/qs-lite",
   "jshintConfig": {
     "globals": {
@@ -37,5 +44,6 @@
   "scripts": {
     "fixpack": "fixpack",
     "test": "make test"
-  }
+  },
+  "types": "qs-lite.d.ts"
 }

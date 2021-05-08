@@ -25,6 +25,10 @@ const object = qs.parse("foo=bar&hoge=pomu"); // => { "foo": "bar", "hoge": "pom
 </script>
 ```
 
+### TypeScript
+
+- https://github.com/kawanet/qs-lite/blob/master/qs-lite.d.ts
+
 ### Repository
 
 - https://github.com/kawanet/qs-lite
