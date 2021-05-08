@@ -42,7 +42,9 @@
     "url": "git+https://github.com/kawanet/qs-lite.git"
   },
   "scripts": {
+    "build": "make",
     "fixpack": "fixpack",
+    "prepack": "make clean all && npm test",
     "test": "make test"
   },
   "types": "qs-lite.d.ts"
