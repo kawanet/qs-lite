@@ -23,8 +23,7 @@
   "homepage": "https://github.com/kawanet/qs-lite",
   "jshintConfig": {
     "globals": {
-      "exports": true,
-      "window": true
+      "exports": true
     },
     "mocha": true,
     "undef": true

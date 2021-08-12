@@ -8,12 +8,10 @@
  * @see http://kawanet.github.io/qs-lite/module-qs-lite.html
  */
 
-(function(exports, window) {
-
-  if (!exports) exports = window.qs = {};
-
+var qs = (function(exports) {
   exports.parse = parse;
   exports.stringify = stringify;
+  return exports;
 
   /**
    * Parse string as application/x-www-form-urlencoded representation.
@@ -72,4 +70,4 @@
     }
   }
 
-})(("undefined" !== typeof exports) && exports, ("undefined" !== typeof window) ? window : {});
+})(("undefined" !== typeof exports) ? exports : {});
