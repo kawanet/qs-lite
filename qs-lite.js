@@ -8,7 +8,7 @@
  * @see http://kawanet.github.io/qs-lite/module-qs-lite.html
  */
 
-var qs = (function(exports) {
+var qs = (function(exports, encodeURIComponent, decodeURIComponent) {
   exports.parse = parse;
   exports.stringify = stringify;
   return exports;
@@ -70,4 +70,4 @@ var qs = (function(exports) {
     }
   }
 
-})(("undefined" !== typeof exports) ? exports : {});
+})(("undefined" !== typeof exports) ? exports : {}, encodeURIComponent, decodeURIComponent);
