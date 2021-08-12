@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>qs-lite browser test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css"/>
+</head>
+<body>
+<div id="mocha"></div>
+<script src="../node_modules/chai/chai.js"></script>
+<script src="../node_modules/mocha/mocha.js"></script>
+<script class="mocha-init">
+  mocha.setup({
+    checkLeaks: true,
+    ui: "bdd"
+  });
+</script>
+<script src="../dist/qs-lite.min.js"></script>
+<script>
+  function require(name) {
+    return ({
+      "chai": chai,
+      "../": qs
+    })[name];
+  }
+</script>
+<script src="../test/parse.js"></script>
+<script src="../test/stringify.js"></script>
+<script class="mocha-exec">
+  mocha.run();
+</script>
+</body>
+</html>
