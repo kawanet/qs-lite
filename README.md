@@ -43,5 +43,5 @@ const object = qs.parse("foo=bar&hoge=pomu"); // => { "foo": "bar", "hoge": "pom
 
 ### BSD License
 
-Copyright (c) 2015-2021, Yusuke Kawasaki
+Copyright (c) 2015-2023, Yusuke Kawasaki
 All rights reserved.
