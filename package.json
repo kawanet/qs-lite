@@ -16,6 +16,7 @@
   "files": [
     "LICENSE",
     "README.md",
+    "browser/import.js",
     "dist/qs-lite.min.js",
     "qs-lite.d.ts",
     "qs-lite.js"
