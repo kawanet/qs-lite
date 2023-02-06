@@ -1,17 +1,17 @@
 {
   "name": "qs-lite",
   "description": "Lightweight querystring parse() & stringify() at less than 1KB minified",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "@kawanet",
   "bugs": {
     "url": "https://github.com/kawanet/qs-lite/issues"
   },
   "devDependencies": {
-    "chai": "^4.3.4",
+    "chai": "^4.3.7",
     "jsdoc": "^3.6.7",
-    "jshint": "^2.13.1",
-    "mocha": "^9.0.3",
-    "terser": "^5.7.1"
+    "jshint": "^2.13.6",
+    "mocha": "^10.2.0",
+    "terser": "^5.16.3"
   },
   "files": [
     "LICENSE",
