@@ -1,10 +1,21 @@
 # qs-lite
 [![Node.js CI](https://github.com/kawanet/qs-lite/workflows/Node.js%20CI/badge.svg?branch=master)](https://github.com/kawanet/qs-lite/actions/)
 [![npm version](https://badge.fury.io/js/qs-lite.svg)](http://badge.fury.io/js/qs-lite)
+[![gzip size](https://img.badgesize.io/https://unpkg.com/qs-lite/dist/qs-lite.min.js?compression=gzip)](https://unpkg.com/qs-lite/dist/qs-lite.min.js)
 
-Lightweight querystring parse() & stringify() at less than 1KB minified
+Lightweight querystring `parse()` & `stringify()` at less than 1KB minified
 
-### Node.js
+## SYNOPSIS
+
+```js
+import * as qs from "qs-lite";
+
+const string = qs.stringify({foo: "bar", hoge: "pomu"}); // => "foo=bar&hoge=pomu"
+
+const object = qs.parse("foo=bar&hoge=pomu"); // => { "foo": "bar", "hoge": "pomu" }
+```
+
+### CommonJS
 
 ```js
 const qs = require("qs-lite");

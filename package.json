@@ -13,13 +13,19 @@
     "mocha": "^11.0.1",
     "terser": "^5.37.0"
   },
+  "exports": {
+    "types": "./qs-lite.d.ts",
+    "import": "./qs-lite.mjs",
+    "require": "./qs-lite.js"
+  },
   "files": [
     "LICENSE",
     "README.md",
     "browser/import.js",
     "dist/qs-lite.min.js",
     "qs-lite.d.ts",
-    "qs-lite.js"
+    "qs-lite.js",
+    "qs-lite.mjs"
   ],
   "homepage": "https://github.com/kawanet/qs-lite",
   "jshintConfig": {
@@ -47,5 +53,6 @@
     "prepack": "make clean all && npm test",
     "test": "make test"
   },
+  "type": "commonjs",
   "types": "qs-lite.d.ts"
 }
